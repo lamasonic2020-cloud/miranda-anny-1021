@@ -1,0 +1,954 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>為什麼肩頸酸痛反而要按臉？</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="臉、脖子、胸口是同一張網。10/21（三）晚上 9:30 免費線上教學，Miranda × Anny 帶你親手摸出這條線。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+/* 結帳連結、報名連結、教學課時間在最下方 <script> 的 CONFIG */
+:root{
+  --bg:#ffffff;
+  --paper:#f8f4ee;
+  --ink:#1c1714;
+  --ink-soft:#4a3f37;
+  --coffee:#6b4630;
+  --coffee-deep:#4a2f1f;
+  --latte:#b8906c;
+  --cream:#e9c9a4;
+  --line:#e6dcd0;
+  --hl:#f3e3cf;
+  --green:#2f5a3c;
+  --gold:linear-gradient(175deg,#d7b57c 0%,#a57d45 55%,#7d5a2c 100%);
+  --champagne:#f6efe4;
+  --radius:18px;
+  --spring:cubic-bezier(.34,1.56,.64,1);
+  --soft:cubic-bezier(.22,1,.36,1);
+}
+*:not(html){box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:"Noto Serif TC","Source Han Serif TC","思源宋體",serif;
+  font-size:18px;line-height:1.9;letter-spacing:.02em;overflow-x:hidden;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+b,strong{font-weight:700;color:var(--coffee-deep)}
+.mark{background:linear-gradient(transparent 58%,var(--hl) 58%);padding:0 .1em}
+.coffee{color:var(--coffee)}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+.wide{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:88px 0;position:relative}
+section.paper{background:var(--paper)}
+section.dark{background:var(--ink);color:#f3ebe1}
+section.dark h2{color:#fff}
+section.dark b{color:var(--cream)}
+.eyebrow{display:inline-block;font-size:13px;letter-spacing:.28em;color:var(--latte);font-weight:600;margin-bottom:14px}
+h1,h2,h3{font-weight:900;line-height:1.35;letter-spacing:.01em}
+h2{font-size:clamp(28px,5.2vw,42px);margin-bottom:28px}
+h3{font-size:clamp(20px,3.4vw,24px);margin-bottom:10px}
+p+p{margin-top:1.1em}
+.center{text-align:center}
+.rule{width:56px;height:2px;background:var(--latte);margin:22px auto;border-radius:2px}
+
+/* 進度條 */
+.progress{position:fixed;inset:0 0 auto 0;height:3px;z-index:60}
+.progress i{display:block;height:100%;background:var(--coffee);transform-origin:0 50%;transform:scaleX(0)}
+
+/* 公告列 */
+.topbar{background:var(--ink);color:#f5ede3;font-size:14px;text-align:center;padding:10px 16px;letter-spacing:.06em}
+.topbar b{color:var(--cream)}
+@media(max-width:600px){.hide-sm{display:none}}
+
+/* 品牌金字 */
+.gold{background:var(--gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* Hero（沿用課程封面：米白香檳底＋金色宋體＋綠色 logo） */
+.hero{
+  position:relative;overflow:hidden;padding:36px 0 80px;
+  background:
+    radial-gradient(80% 60% at 85% 20%,#fbf6ee 0%,transparent 70%),
+    linear-gradient(180deg,var(--champagne) 0%,#fff 100%);
+}
+.hero .swirl{position:absolute;inset:auto -10% -20% -10%;height:70%;pointer-events:none;opacity:.55}
+.hero .swirl path{fill:none;stroke:#d9c29c;stroke-width:1}
+.brandrow{display:flex;align-items:center;gap:14px;margin-bottom:26px}
+.brandrow img{height:78px;width:auto}
+.brandrow .x{font-size:22px;color:var(--latte)}
+.brandrow .anny{line-height:1.3;font-size:13px;letter-spacing:.2em;color:var(--ink-soft)}
+.brandrow .anny b{display:block;font-size:26px;letter-spacing:.06em;font-weight:500}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center;position:relative}
+.hero-text{text-align:left}
+.hero-text .count,.hero-text .event{justify-content:flex-start}
+.photos{position:relative;height:540px}
+.photos .ph{
+  position:absolute;overflow:hidden;border-radius:999px 999px 26px 26px;
+  box-shadow:0 30px 60px -30px rgba(74,47,31,.55);border:6px solid #fff;background:#eee;
+}
+.photos .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.photos .m{width:62%;height:84%;left:0;top:0;animation:bob 6s ease-in-out infinite}
+.photos .a{width:52%;height:66%;right:0;bottom:0;animation:bob 6s -3s ease-in-out infinite}
+.photos .cap{
+  position:absolute;background:#fff;border-radius:999px;padding:6px 14px;font-size:13px;font-weight:700;
+  box-shadow:0 10px 24px -12px rgba(74,47,31,.5);white-space:nowrap;
+}
+.photos .cap small{font-weight:500;color:var(--ink-soft);margin-left:6px}
+.photos .cap.c1{left:4%;top:78%}
+.photos .cap.c2{right:2%;bottom:-14px}
+.photos .lineface{position:absolute;right:-6%;top:-4%;width:46%;opacity:.14}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-text{text-align:center}
+  .hero-text .count,.hero-text .event{justify-content:center}
+  .brandrow{justify-content:center}
+  .photos{height:420px;max-width:420px;margin:10px auto 0;width:100%}
+}
+@media(max-width:480px){.photos{height:360px}.brandrow img{height:64px}.brandrow .anny b{font-size:22px}}
+
+/* Hero（舊） */
+.pre{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:6px 18px;font-size:14px;color:var(--ink-soft);margin-bottom:26px;background:#fff}
+.hero h1{font-size:clamp(36px,6.4vw,64px);margin-bottom:20px;line-height:1.3}
+.hero h1 .face{display:inline-block}
+.hero h1 .face.wobble{animation:jelly 1.1s .6s both}
+.hero .sub{font-size:clamp(17px,2.4vw,20px);color:var(--ink-soft);max-width:560px;margin:0 0 26px}
+@media(max-width:860px){.hero .sub{margin:0 auto 26px}}
+.event{
+  display:inline-flex;align-items:center;gap:18px;flex-wrap:wrap;justify-content:center;
+  background:var(--paper);border-radius:22px;padding:18px 26px;margin-bottom:30px;text-align:left;
+}
+.event .date{font-size:15px;line-height:1.6;color:var(--ink-soft)}
+.event .date b{display:block;font-size:22px;color:var(--ink)}
+.hosts{display:flex}
+.hosts span{
+  width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:20px;
+  background:linear-gradient(160deg,#efe4d6,#d8c2a9);color:var(--coffee);border:3px solid #fff;
+}
+.hosts span+span{margin-left:-12px;background:linear-gradient(160deg,#6b4630,#4a2f1f);color:#fff}
+
+/* 倒數 */
+.count{display:flex;gap:10px;justify-content:center;margin:0 0 30px}
+.count div{background:var(--ink);color:#fff;border-radius:14px;min-width:70px;padding:10px 6px;text-align:center}
+.count b{display:block;color:#fff;font-size:30px;line-height:1.15;font-variant-numeric:tabular-nums}
+.count span{font-size:12px;letter-spacing:.2em;opacity:.7}
+.count .tick{animation:tick .5s var(--spring)}
+@keyframes tick{0%{transform:scale(1.15,.85)}100%{transform:none}}
+.count.light div{background:#fff;color:var(--ink);border:1px solid var(--line)}
+.count.light b{color:var(--coffee-deep)}
+
+/* 按鈕 */
+.btn{
+  display:inline-flex;flex-direction:column;align-items:center;gap:2px;
+  background:var(--coffee);color:#fff;text-decoration:none;border:0;cursor:pointer;
+  font-family:inherit;font-weight:900;font-size:clamp(18px,2.8vw,22px);letter-spacing:.06em;
+  padding:20px 44px;border-radius:999px;
+  box-shadow:0 14px 28px -14px rgba(74,47,31,.7), inset 0 -4px 0 rgba(0,0,0,.18);
+  transition:transform .5s var(--spring);will-change:transform;
+}
+.btn small{font-weight:500;font-size:13px;opacity:.85;letter-spacing:.08em}
+.btn:hover{animation:jelly .9s both}
+.btn:active{transform:scale(.94,.9)}
+.btn.light{background:var(--cream);color:var(--coffee-deep)}
+.btn.ghost{background:transparent;color:var(--coffee);box-shadow:inset 0 0 0 2px var(--coffee)}
+@keyframes jelly{
+  0%{transform:scale(1,1)}30%{transform:scale(1.12,.88)}40%{transform:scale(.9,1.1)}
+  50%{transform:scale(1.06,.94)}65%{transform:scale(.98,1.02)}75%{transform:scale(1.01,.99)}100%{transform:scale(1,1)}
+}
+.trust{margin-top:14px;font-size:14px;color:var(--ink-soft)}
+section.dark .trust{color:#cbbcad}
+
+/* 進場動畫 */
+.reveal{transform:translateY(34px) scale(.97);transition:transform 1s var(--spring)}
+.reveal.in{opacity:1;transform:none}
+.pop{transform:scale(.82);transition:transform .8s var(--spring)}
+.pop.in{opacity:1;transform:none}
+.jelly-scroll{will-change:transform;transform-origin:50% 50%}
+.jelly-scroll.settled{transition:opacity .7s var(--soft)}
+
+/* 一張網（圖解） */
+.net{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center}
+.net svg{width:100%;max-width:360px;margin:0 auto;overflow:visible}
+.net .path{fill:none;stroke:var(--coffee);stroke-width:3;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.4s var(--soft)}
+.net .body{fill:none;stroke:var(--line);stroke-width:2}
+.net .node{fill:#fff;stroke:var(--coffee);stroke-width:3;transform-box:fill-box;transform-origin:center;transform:scale(0);transition:transform .8s var(--spring)}
+.net .lbl{font-family:inherit;font-size:15px;fill:var(--ink);font-weight:700}
+.net .lbl.sm{font-size:12px;fill:var(--ink-soft);font-weight:500}
+.net.in .path{stroke-dashoffset:0}
+.net.in .node{transform:scale(1)}
+.net.in .lbl{opacity:1}
+.net.in .n2{transition-delay:.5s}.net.in .n3{transition-delay:1s}.net.in .n4{transition-delay:1.5s}
+.chain{list-style:none;counter-reset:c}
+.chain li{position:relative;padding:0 0 22px 46px}
+.chain li::before{
+  counter-increment:c;content:counter(c);position:absolute;left:0;top:2px;width:30px;height:30px;border-radius:50%;
+  background:var(--coffee);color:#fff;font-size:14px;font-weight:900;display:grid;place-items:center;
+}
+.chain li b{display:block;font-size:19px}
+.chain li span{font-size:16px;color:var(--ink-soft)}
+@media(max-width:760px){.net{grid-template-columns:1fr}.net svg{max-width:280px}}
+
+/* 信件體 */
+.letter p{font-size:clamp(17px,2.4vw,19px)}
+.letter .dear{font-size:22px;font-weight:700;margin-bottom:18px}
+.pull{
+  margin:40px 0;padding:28px 28px 28px 32px;border-left:3px solid var(--coffee);
+  font-size:clamp(21px,3.4vw,27px);font-weight:700;line-height:1.6;color:var(--coffee-deep);
+  background:linear-gradient(90deg,var(--paper),transparent);border-radius:0 var(--radius) var(--radius) 0;
+}
+section.paper .pull{background:linear-gradient(90deg,#fff,transparent)}
+.sign{margin-top:36px;font-size:15px;color:var(--ink-soft)}
+.sign b{font-size:26px;display:block;color:var(--ink);font-weight:900;letter-spacing:.08em}
+
+/* 痛點 */
+.pains{list-style:none;display:grid;gap:14px;margin:30px 0}
+.pains li{
+  background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 22px 18px 58px;position:relative;font-size:17px;
+  transition:transform .6s var(--spring),box-shadow .3s;
+}
+.pains li::before{content:"";position:absolute;left:22px;top:24px;width:18px;height:18px;border-radius:50%;border:2px solid var(--latte)}
+.pains li::after{content:"";position:absolute;left:28px;top:30px;width:6px;height:6px;border-radius:50%;background:var(--coffee)}
+.pains li:hover{transform:translateX(6px) scale(1.01);box-shadow:0 10px 24px -16px rgba(74,47,31,.5)}
+
+/* 三個秘密 */
+.secrets{display:grid;gap:22px;margin-top:40px}
+.secret{
+  background:#fff;border-radius:22px;padding:34px 30px;border:1px solid var(--line);
+  display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start;
+  transition:transform .7s var(--spring),box-shadow .4s;
+}
+.secret:hover{transform:translateY(-6px) rotate(-.4deg);box-shadow:0 26px 40px -28px rgba(74,47,31,.55)}
+.secret .no{width:64px;height:64px;border-radius:50%;background:var(--coffee);color:#fff;display:grid;place-items:center;font-size:26px;font-weight:900}
+.secret .myth{font-size:15px;color:var(--ink-soft);text-decoration:line-through;text-decoration-color:var(--latte);margin-bottom:4px}
+@media(max-width:560px){.secret{grid-template-columns:1fr;padding:28px 22px}.secret .no{width:52px;height:52px;font-size:22px}}
+
+/* 兩位講師 */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:36px}
+.teacher{
+  background:#fff;border-radius:24px;border:1px solid var(--line);overflow:hidden;
+  transition:transform .7s var(--spring),box-shadow .4s;
+}
+.teacher:hover{transform:translateY(-8px) scale(1.01,.99);box-shadow:0 30px 50px -34px rgba(74,47,31,.6)}
+.teacher .ph{
+  overflow:hidden;aspect-ratio:4/3;display:grid;place-items:center;text-align:center;font-size:13px;letter-spacing:.16em;color:var(--coffee);
+  background:linear-gradient(160deg,#efe4d6,#d8c2a9);
+}
+.teacher .ph span{display:block;font-size:64px;font-weight:900;line-height:1;margin-bottom:6px}
+.teacher .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 15%;transition:transform 1s var(--spring)}
+.teacher:hover .ph img{transform:scale(1.05)}
+.teacher.anny .ph{background:linear-gradient(160deg,#7a543c,#4a2f1f);color:var(--cream)}
+.teacher .bd{padding:26px 26px 30px}
+.teacher .role{font-size:13px;letter-spacing:.24em;color:var(--latte);font-weight:700}
+.teacher h3{margin:4px 0 10px}
+.teacher ul{list-style:none;font-size:16px;color:var(--ink-soft)}
+.teacher li{padding-left:18px;position:relative;margin-bottom:6px}
+.teacher li::before{content:"";position:absolute;left:0;top:.8em;width:8px;height:2px;background:var(--latte)}
+.plus{display:none}
+@media(max-width:700px){.duo{grid-template-columns:1fr}}
+
+/* 教學課會學到 */
+.learn{display:grid;gap:16px;margin:30px 0 36px}
+.learn div{
+  display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;
+  border:1px solid rgba(233,201,164,.25);border-radius:18px;padding:22px 24px;
+  transition:transform .6s var(--spring),background .3s;
+}
+.learn div:hover{transform:scale(1.02,.98);background:rgba(255,255,255,.04)}
+.learn .k{font-size:34px;font-weight:900;color:var(--cream);line-height:1}
+.learn h3{font-size:20px;color:#fff;margin-bottom:4px}
+.learn p{font-size:16px;color:#d9ccbf}
+
+/* 當場試（分頁） */
+.try{background:#fff;border:1px solid var(--line);border-radius:28px;padding:40px 36px}
+.tabs{display:inline-flex;background:var(--paper);border-radius:999px;padding:5px;margin:10px 0 26px;position:relative}
+.tabs button{
+  position:relative;z-index:1;border:0;background:transparent;font-family:inherit;font-weight:700;font-size:15px;
+  padding:10px 20px;border-radius:999px;cursor:pointer;color:var(--ink-soft);transition:color .3s;
+}
+.tabs button[aria-selected="true"]{color:#fff}
+.tabs .blob{position:absolute;top:5px;bottom:5px;left:5px;border-radius:999px;background:var(--coffee);transition:transform .7s var(--spring),width .7s var(--spring)}
+.pane{display:none}
+.pane.on{display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:center;animation:paneIn .7s var(--spring)}
+@keyframes paneIn{0%{opacity:0;transform:scale(.94,1.04) translateY(10px)}100%{opacity:1;transform:none}}
+.pane ol{padding-left:1.3em}
+.pane ol li{margin-bottom:8px;font-size:17px}
+.pane .note{margin-top:12px;font-size:15px;color:var(--ink-soft)}
+.timer{
+  aspect-ratio:1;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;text-align:center;
+  position:relative;max-width:240px;width:100%;margin:0 auto;
+}
+.timer svg{position:absolute;inset:0;width:100%;height:100%;transform:rotate(-90deg)}
+.timer circle{fill:none;stroke:var(--coffee);stroke-width:4;stroke-linecap:round}
+.timer .n{font-size:56px;font-weight:900;line-height:1;color:var(--coffee-deep)}
+.timer .u{font-size:13px;letter-spacing:.3em;color:var(--ink-soft)}
+.timer button{
+  margin-top:10px;background:var(--coffee);color:#fff;border:0;border-radius:999px;
+  font-family:inherit;font-weight:700;padding:8px 20px;cursor:pointer;font-size:14px;transition:transform .5s var(--spring);
+}
+.timer button:active{transform:scale(.9,.84)}
+@media(max-width:700px){.try{padding:32px 20px}.pane.on{grid-template-columns:1fr}.tabs button{padding:9px 14px;font-size:14px}}
+
+/* 價值堆疊 */
+.stack{background:#fff;border:2px solid var(--coffee);border-radius:28px;padding:40px 34px;box-shadow:0 40px 70px -50px rgba(74,47,31,.8)}
+.stack h2{text-align:center}
+.stack ul{list-style:none;margin:10px 0 28px}
+.stack li{display:flex;gap:16px;align-items:flex-start;justify-content:space-between;padding:16px 0;border-bottom:1px dashed var(--line);font-size:17px}
+.stack li .t{display:flex;gap:12px}
+.stack li .t svg{flex:none;width:22px;height:22px;margin-top:5px}
+.stack li .t em{display:block;font-style:normal;font-size:14px;color:var(--ink-soft)}
+.stack li .v{flex:none;font-size:14px;color:var(--coffee);font-weight:700;white-space:nowrap;padding-top:4px}
+.tag{display:inline-block;font-size:12px;background:var(--hl);color:var(--coffee-deep);border-radius:6px;padding:0 8px;margin-left:6px;vertical-align:2px;letter-spacing:.06em}
+.price{text-align:center;padding-top:6px}
+.price .label{font-size:15px;color:var(--ink-soft);letter-spacing:.1em}
+.price .num{font-size:clamp(52px,11vw,84px);font-weight:900;color:var(--coffee-deep);line-height:1.1}
+.price .num small{font-size:.35em;font-weight:700;color:var(--ink-soft)}
+.price .per{font-size:16px;color:var(--ink-soft);margin-bottom:26px}
+.btns{display:flex;flex-direction:column;align-items:center;gap:14px}
+@media(max-width:560px){.stack{padding:30px 20px}.stack li{flex-direction:column;gap:4px}.stack li .v{padding-left:34px}}
+
+/* 課程封面 */
+.covers{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 18px;margin:0 -4px 20px;-webkit-overflow-scrolling:touch}
+.covers::-webkit-scrollbar{height:6px}.covers::-webkit-scrollbar-thumb{background:var(--line);border-radius:6px}
+.covers figure{flex:0 0 78%;max-width:340px;scroll-snap-align:start;border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--line);transition:transform .7s var(--spring)}
+.covers figure:hover{transform:translateY(-6px) scale(1.02,.98)}
+.covers img{width:100%;aspect-ratio:1460/752;object-fit:cover}
+.covers figcaption{font-size:14px;font-weight:700;padding:10px 14px}
+.covers figcaption small{display:block;font-weight:500;color:var(--ink-soft);font-size:12px}
+@media(min-width:760px){.covers figure{flex-basis:44%}}
+.reveal-price{
+  text-align:center;border-radius:22px;padding:34px 22px;margin-top:6px;position:relative;overflow:hidden;
+  background:linear-gradient(160deg,#fbf6ee,#f1e4d0);border:1px solid #e8d6ba;
+}
+.reveal-price .seal{
+  width:84px;height:84px;margin:0 auto 14px;border-radius:50%;display:grid;place-items:center;
+  background:var(--gold);color:#fff;font-size:30px;font-weight:900;box-shadow:0 12px 24px -12px rgba(125,90,44,.8);
+  animation:seal 3.2s var(--spring) infinite;
+}
+@keyframes seal{0%,70%,100%{transform:scale(1)}78%{transform:scale(1.14,.86)}86%{transform:scale(.94,1.06)}93%{transform:scale(1.02,.98)}}
+.reveal-price h3{font-size:clamp(22px,4vw,28px)}
+.reveal-price p{color:var(--ink-soft);font-size:16px;margin-bottom:22px}
+
+/* 算帳 */
+.math{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:34px 0}
+.math .cell{background:#fff;border-radius:20px;border:1px solid var(--line);padding:28px 18px;text-align:center;transition:transform .7s var(--spring)}
+.math .cell:hover{transform:scale(1.04,.97)}
+.math .n{font-size:clamp(36px,6vw,50px);font-weight:900;color:var(--coffee);line-height:1.1}
+.math .d{font-size:14px;color:var(--ink-soft);margin-top:6px}
+@media(max-width:640px){.math{grid-template-columns:1fr}}
+
+/* 適合 */
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
+.fit .col{border-radius:22px;padding:30px 26px;border:1px solid var(--line);background:#fff}
+.fit .col.no{background:transparent;border-style:dashed}
+.fit h3{font-size:20px}
+.fit ul{list-style:none;margin-top:10px}
+.fit li{padding:8px 0 8px 30px;position:relative;font-size:17px}
+.fit .yes li::before{content:"✓";position:absolute;left:0;color:var(--coffee);font-weight:900}
+.fit .no li::before{content:"✕";position:absolute;left:0;color:var(--latte)}
+@media(max-width:640px){.fit{grid-template-columns:1fr}}
+
+/* 見證 */
+.testis{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.testi{border:1px dashed var(--latte);border-radius:20px;padding:26px 22px;background:#fff;font-size:15px;color:var(--ink-soft);min-height:190px;display:flex;flex-direction:column;justify-content:space-between}
+.testi .q{font-size:40px;line-height:1;color:var(--latte);font-weight:900}
+.testi .who{font-size:13px;letter-spacing:.1em}
+@media(max-width:760px){.testis{grid-template-columns:1fr}}
+
+/* 學員見證 */
+.quotes{columns:2;column-gap:20px;margin-top:34px}
+.quote{
+  break-inside:avoid;margin:0 0 20px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px 24px 20px;position:relative;
+  transition:transform .7s var(--spring),box-shadow .4s;
+}
+.quote::before{content:"“";position:absolute;top:-6px;left:18px;font-size:64px;line-height:1;color:var(--cream);font-weight:900}
+.quote:hover{transform:translateY(-5px) rotate(.3deg) scale(1.01,.99);box-shadow:0 24px 40px -30px rgba(74,47,31,.6)}
+.quote blockquote{font-size:17px;line-height:1.85;position:relative}
+.quote figcaption{margin-top:14px;font-size:13px;letter-spacing:.14em;color:var(--latte);font-weight:700}
+@media(max-width:700px){.quotes{columns:1}}
+.wall-head{text-align:center;margin:44px 0 18px;font-size:15px;color:var(--ink-soft)}
+.wall-head small{display:block;font-size:12px;letter-spacing:.2em;color:var(--latte)}
+.wall{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.track{display:flex;gap:18px;width:max-content;padding:14px 0 24px;animation:marquee 60s linear infinite}
+.wall:hover .track,.wall:focus-within .track{animation-play-state:paused}
+@keyframes marquee{to{transform:translateX(calc(-50% - 9px))}}
+.shot{
+  flex:none;width:210px;height:330px;border:0;padding:0;border-radius:18px;overflow:hidden;cursor:zoom-in;background:#fff;
+  box-shadow:0 18px 30px -22px rgba(74,47,31,.7);transition:transform .7s var(--spring);
+}
+.shot:nth-child(odd){transform:rotate(-1.2deg)}
+.shot:nth-child(even){transform:rotate(1.2deg) translateY(10px)}
+.shot:hover{transform:scale(1.07,1.02) rotate(0)}
+.shot:active{transform:scale(.95,.9)}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:50% 0}
+@media(max-width:560px){.shot{width:170px;height:270px}}
+.lightbox{position:fixed;inset:0;z-index:80;background:rgba(28,23,20,.82);display:grid;place-items:center;padding:24px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.lightbox[hidden]{display:none}
+.lightbox img{max-width:min(520px,100%);max-height:86vh;border-radius:18px;box-shadow:0 30px 60px -20px rgba(0,0,0,.6);animation:lbIn .7s var(--spring)}
+@keyframes lbIn{0%{opacity:0;transform:scale(.7,.8)}60%{opacity:1;transform:scale(1.04,.97)}100%{transform:none}}
+.lb-close{position:absolute;top:16px;right:18px;width:46px;height:46px;border-radius:50%;border:0;background:#fff;font-size:26px;cursor:pointer;color:var(--ink);transition:transform .5s var(--spring)}
+.lb-close:active{transform:scale(.85)}
+@media (prefers-reduced-motion: reduce){.track{animation:none}.wall{overflow-x:auto}}
+
+/* 說清楚 */
+.promise{display:grid;gap:18px;margin-top:30px}
+.promise div{padding:26px 26px 26px 30px;border-radius:18px;background:#fff;border:1px solid var(--line)}
+.promise h3{font-size:20px}
+
+/* FAQ */
+.faq{margin-top:28px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 44px 22px 0;font-weight:700;font-size:18px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"";position:absolute;right:8px;top:50%;width:14px;height:14px;margin-top:-10px;
+  border-right:2px solid var(--coffee);border-bottom:2px solid var(--coffee);transform:rotate(45deg);transition:transform .6s var(--spring);
+}
+.faq details[open] summary::after{transform:rotate(225deg) translate(-4px,-4px)}
+.faq .a{padding:0 0 24px;color:var(--ink-soft);font-size:17px;transform-origin:50% 0}
+.faq details[open] .a{animation:drop .7s var(--spring)}
+@keyframes drop{0%{opacity:0;transform:scaleY(.6) translateY(-8px)}100%{opacity:1;transform:none}}
+
+.ps p{font-size:17px}
+.ps b{color:var(--coffee)}
+footer{padding:48px 0 120px;font-size:13px;color:#8a7c70;text-align:center;border-top:1px solid var(--line)}
+footer p{max-width:640px;margin:0 auto}
+footer img{height:90px;margin:0 auto 20px;opacity:.9}
+
+/* 手機底部 CTA */
+.sticky{
+  position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:50;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border:1px solid var(--line);border-radius:999px;padding:8px 8px 8px 22px;
+  box-shadow:0 20px 40px -20px rgba(74,47,31,.5);
+  transform:translateY(140%);transition:transform .8s var(--spring);max-width:560px;margin:0 auto;
+}
+.sticky.on{transform:none}
+.sticky .s{font-size:14px;line-height:1.4}
+.sticky .s b{display:block;font-size:15px}
+.sticky .btn{padding:12px 22px;font-size:16px}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal,.pop{opacity:1;transform:none}
+  .net .path{stroke-dashoffset:0}.net .node{transform:none}.net .lbl{opacity:1}
+}
+</style>
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"><i id="bar"></i></div>
+
+<div class="topbar">免費線上教學｜<b>10/21（三）晚上 9:30</b><span class="hide-sm">（台灣時間）｜Miranda × Anny</span></div>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <svg class="swirl" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 300 C300 180 600 380 1200 160"/><path d="M0 320 C320 200 620 400 1200 180"/><path d="M0 340 C340 220 640 420 1200 200"/>
+    <path d="M0 360 C360 240 660 440 1200 220"/><path d="M0 380 C380 260 680 460 1200 240"/>
+  </svg>
+  <div class="wide">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="brandrow reveal">
+          <img src="assets/logo-method.png" alt="Miranda's METHOD — Hands Of Impact">
+          <span class="x">×</span>
+          <span class="anny"><b>Anny</b>俄羅斯臉部筋膜</span>
+        </div>
+        <div class="pre reveal">給按摩師、美體師、身體工作者</div>
+        <h1 class="reveal">為什麼肩頸酸痛<br>反而要<span class="face gold">按臉</span>？</h1>
+        <p class="sub reveal">臉、脖子、胸口，其實是<b>同一張網</b>。只按肩膀，客人睡一覺又緊回來；把這條線一起放鬆，客人會自己說出差別。</p>
+        <div class="event reveal">
+          <div class="date"><b>10/21（三）21:30</b>免費線上教學 ・ 胸廓 × 臉部筋膜</div>
+        </div>
+        <div class="count reveal" data-count aria-label="距離教學課開始">
+          <div><b data-u="d">00</b><span>天</span></div>
+          <div><b data-u="h">00</b><span>時</span></div>
+          <div><b data-u="m">00</b><span>分</span></div>
+          <div><b data-u="s">00</b><span>秒</span></div>
+        </div>
+        <a class="btn js-reg reveal" href="https://www.skool.com/mirandas-massage-school-5068/about">免費報名 10/21 線上教學<small>當天帶你親手做一次</small></a>
+        <p class="trust">免費參加 ・ 準備一面鏡子就好</p>
+      </div>
+      <div class="photos reveal">
+        <img class="lineface" src="assets/logo-face.png" alt="">
+        <div class="ph m"><img src="assets/miranda.jpg" alt="Miranda"></div>
+        <div class="ph a"><img src="assets/anny.jpg" alt="Anny"></div>
+        <div class="cap c1">Miranda<small>胸廓與體態</small></div>
+        <div class="cap c2">Anny<small>臉部筋膜塑形</small></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= 一張網 ================= -->
+<section class="paper">
+  <div class="wide">
+    <div class="net" id="net">
+      <svg viewBox="0 0 300 420" aria-label="胸口到臉部的筋膜連線示意">
+        <!-- 側面上半身輪廓 -->
+        <path class="body" d="M150 40 C205 40 222 82 218 122 C216 142 206 156 196 166 L192 206 C230 216 268 236 280 270 L292 420 M150 40 C110 40 92 72 96 110 C98 130 104 146 118 160 L120 206 C80 216 36 240 22 280 L10 420"/>
+        <!-- 胸口 → 頸前 → 下巴 → 太陽穴 -->
+        <path class="path" pathLength="1" d="M92 300 C110 262 128 238 140 212 C150 190 150 176 150 160 C152 140 166 124 180 112 C196 98 204 84 204 70"/>
+        <circle class="node n1" cx="92" cy="300" r="9"/>
+        <circle class="node n2" cx="140" cy="212" r="9"/>
+        <circle class="node n3" cx="180" cy="112" r="9"/>
+        <circle class="node n4" cx="204" cy="70" r="9"/>
+        <text class="lbl n1" x="112" y="318">胸口・胸小肌</text>
+        <text class="lbl sm n1" x="112" y="336">肩膀被往前拉</text>
+        <text class="lbl n2" x="14" y="206">頸前・頸闊肌</text>
+        <text class="lbl sm n2" x="14" y="224">從胸口一路到下巴</text>
+        <text class="lbl n3" x="198" y="130">下巴・嘴角</text>
+        <text class="lbl n4" x="216" y="66">太陽穴・顳肌</text>
+      </svg>
+      <div>
+        <span class="eyebrow reveal">答案在這條線上</span>
+        <h2 class="reveal">不是哪裡緊<br>就只按哪裡</h2>
+        <ol class="chain">
+          <li class="reveal"><b>胸口一縮，肩膀就往前</b><span>長時間低頭、打電腦，胸小肌變短，把肩膀往前拉。</span></li>
+          <li class="reveal"><b>脖子前面那一層跟著被拉</b><span>頸闊肌從胸口一路延伸到下巴、嘴角，是同一張網的一段。</span></li>
+          <li class="reveal"><b>臉上的張力也一起往下扯</b><span>單邊咀嚼、側睡，讓臉兩側的張力不一樣，太陽穴、顳肌也跟著緊。</span></li>
+        </ol>
+        <p class="reveal" style="font-size:17px;color:var(--ink-soft)">所以只按肩膀，當下很鬆，睡一覺又回去了。<br><b>把胸口、脖子、臉串成一條線，客人才會真正感覺「整個上半身輕了」。</b></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 信件體 ================= -->
+<section>
+  <div class="wrap letter">
+    <span class="eyebrow reveal">一封寫給你的信</span>
+    <p class="dear reveal">親愛的同行，你好：</p>
+    <p class="reveal">我們是 Miranda 跟 Anny。一個教胸廓與體態，一個教臉部筋膜。</p>
+    <p class="reveal">我們兩個教的東西看起來完全不一樣，但在客人身上，常常遇到同一個狀況——</p>
+    <p class="reveal">客人說肩頸很緊。你認真按了一個小時，當下很放鬆，<b>隔天又緊回來</b>。客人沒有記憶點，也不會為了這個多付錢。</p>
+    <div class="pull reveal jelly-scroll">問題不是你按得不夠用力。<br>是你只按了那張網的其中一段。</div>
+    <p class="reveal">Anny 做臉從來不單做臉，她會搭配頭部、肩膀，還有 Miranda 的胸廓手法一起做。Miranda 的胸廓手法做完，也會發現客人的下巴、脖子跟著鬆開。</p>
+    <p class="reveal">我們後來才發現：我們在處理的，是同一條線的兩端。</p>
+    <p class="reveal">所以這一次，我們把兩套技術放在一起教。<span class="mark">從胸口到臉，一套上半身的高單價服務。</span></p>
+    <p class="reveal">10/21 晚上 9:30，我們會在免費線上教學把這條線講清楚，也會直接帶你在自己身上做一次。</p>
+    <div class="sign reveal">把技術變成收入的，<b>Miranda × Anny</b>Miranda's Massage School</div>
+  </div>
+</section>
+
+<!-- ================= 痛點 ================= -->
+<section class="paper">
+  <div class="wrap">
+    <span class="eyebrow reveal">你是不是也這樣</span>
+    <h2 class="reveal">學了那麼多手法<br>客人還是<span class="coffee">沒有記憶點</span>？</h2>
+    <ul class="pains">
+      <li class="reveal">客人的肩頸，按完當下鬆，隔天又緊回來</li>
+      <li class="reveal">做臉只會上油滑過去，或是用力按到底，客人說不出差別</li>
+      <li class="reveal">背了一堆穴位、套路，換一張臉就不知道怎麼做</li>
+      <li class="reveal">不能放前後對比照，不知道還能拿什麼說服客人</li>
+      <li class="reveal">想加一個高單價項目，但不知道要學什麼、怎麼賣</li>
+    </ul>
+    <p class="reveal">如果你有勾到兩個以上，10/21 那一場就是為你開的。</p>
+  </div>
+</section>
+
+<!-- ================= 三個秘密 ================= -->
+<section>
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow reveal">線上教學會講的三個關鍵</span>
+      <h2 class="reveal">從胸口到臉的三個秘密</h2>
+    </div>
+    <div class="secrets">
+      <article class="secret reveal">
+        <div class="no">01</div>
+        <div>
+          <div class="myth">錯誤觀念：哪裡緊就按哪裡</div>
+          <h3>筋膜是一整張網</h3>
+          <p>筋膜像一張有彈性的吊床，把肌肉跟骨骼兜在一起。胸口那一端被拉住，臉這一端也會跟著跑掉。<b>從胸口、脖子到臉一起梳理，放鬆感才留得住。</b></p>
+        </div>
+      </article>
+      <article class="secret reveal">
+        <div class="no">02</div>
+        <div>
+          <div class="myth">錯誤觀念：要大力、要上油滑，才叫有做到</div>
+          <h3>輕，但要「咬住」</h3>
+          <p>Miranda 的胸廓手法強調輕柔、節奏慢、順序對；Anny 的臉部筋膜手法<b>不上油</b>，一手固定、一手拉開，靠手感咬住那一層張力。不是用力，是找對層次。</p>
+        </div>
+      </article>
+      <article class="secret reveal">
+        <div class="no">03</div>
+        <div>
+          <div class="myth">錯誤觀念：沒有前後對比照就賣不動</div>
+          <h3>先做半邊，讓客人自己說</h3>
+          <p>做完一邊，客人會說「這邊好輕，那邊還好緊」。<b>客人自己有感覺，就是最好的成交見證</b>，不需要話術，也不踩法規。</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 兩位講師 ================= -->
+<section class="paper">
+  <div class="wide">
+    <div class="center">
+      <span class="eyebrow reveal">兩套技術，一次學會</span>
+      <h2 class="reveal">一個管胸口，一個管臉</h2>
+    </div>
+    <div class="duo">
+      <article class="teacher reveal">
+        <div class="ph"><img src="assets/miranda.jpg" alt="Miranda"></div>
+        <div class="bd">
+          <div class="role">胸廓與體態</div>
+          <h3>Miranda</h3>
+          <ul>
+            <li>Miranda's Massage School 創辦人 ・ Miranda's Method™</li>
+            <li>不需裸露胸部，也能放鬆整個胸腔的手法</li>
+            <li>自己的服務定價：一小時 3,500、三堂 9,000</li>
+          </ul>
+        </div>
+      </article>
+      <article class="teacher anny reveal">
+        <div class="ph"><img src="assets/anny.jpg" alt="Anny"></div>
+        <div class="bd">
+          <div class="role">俄羅斯臉部筋膜塑形</div>
+          <h3>Anny</h3>
+          <ul>
+            <li>美容產業 17 年，有自己的店面與企業培訓</li>
+            <li>臉部與頭部賽事冠軍（賽事名稱待確認）</li>
+            <li>不上油、不背穴位，零基礎也能上手</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 教學課會學到 ================= -->
+<section class="dark">
+  <div class="wrap">
+    <span class="eyebrow reveal" style="color:var(--cream)">10/21（三）21:30 ・ 免費線上教學</span>
+    <h2 class="reveal">那一晚，你會帶走這些</h2>
+    <div class="learn">
+      <div class="reveal"><span class="k">01</span><div><h3>為什麼肩頸酸痛，答案在臉上</h3><p>把胸口、脖子、臉那條線畫給你看，以後客人說哪裡緊，你知道要從哪裡開始。</p></div></div>
+      <div class="reveal"><span class="k">02</span><div><h3>現場帶做：胸小肌＋半臉梳理</h3><p>準備一面鏡子，跟著 Miranda 和 Anny 在自己身上做一次，當場比較左右邊。</p></div></div>
+      <div class="reveal"><span class="k">03</span><div><h3>把它變成一個高單價服務</h3><p>怎麼組成一套上半身服務、怎麼讓客人自己感覺到差別、法規上哪些字不能寫。</p></div></div>
+    </div>
+    <div class="count light reveal" data-count>
+      <div><b data-u="d">00</b><span>天</span></div>
+      <div><b data-u="h">00</b><span>時</span></div>
+      <div><b data-u="m">00</b><span>分</span></div>
+      <div><b data-u="s">00</b><span>秒</span></div>
+    </div>
+    <div class="center"><a class="btn light js-reg reveal" href="https://www.skool.com/mirandas-massage-school-5068/about">免費報名線上教學<small>10/21 晚上 9:30 見</small></a></div>
+  </div>
+</section>
+
+<!-- ================= 當場試 ================= -->
+<section>
+  <div class="wide">
+    <div class="try reveal">
+      <div class="center">
+        <span class="eyebrow">先驗貨，再決定</span>
+        <h2 style="margin-bottom:6px">現在就在自己身上試</h2>
+        <p style="color:var(--ink-soft)">兩個動作都先做一邊，做完比比看左右。</p>
+        <div class="tabs" role="tablist">
+          <span class="blob" id="blob"></span>
+          <button role="tab" aria-selected="true" data-pane="p1">胸口｜胸小肌</button>
+          <button role="tab" aria-selected="false" data-pane="p2">臉｜半邊額頭</button>
+        </div>
+      </div>
+      <div class="pane on" id="p1">
+        <div>
+          <ol>
+            <li>手舉起來，四指放在腋下、往胸腔內側壓</li>
+            <li>大拇指扣在鎖骨正下方</li>
+            <li>四指不動，大拇指慢慢往外滑</li>
+            <li>放下手、挺胸——比比看左右肩</li>
+          </ol>
+          <p class="note">有點酸是正常的，長時間打電腦的人，這裡通常都很緊。</p>
+        </div>
+        <div class="timer" data-sec="60"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/></svg><div><div class="n">60</div><div class="u">秒</div><button type="button">開始計時</button></div></div>
+      </div>
+      <div class="pane" id="p2">
+        <div>
+          <ol>
+            <li>不用上油。準備鏡子，只做右半邊</li>
+            <li>左手頂住額頭固定，<b>這隻手全程不要放</b></li>
+            <li>右手食指＋中指從眉毛平貼，慢慢往外拉，感覺「有點拉不開」</li>
+            <li>到太陽穴上方，在顳肌畫小螺旋，往上頂、離開</li>
+          </ol>
+          <p class="note">做完照鏡子、閉眼感覺一下：兩邊一樣嗎？感覺不出差別，九成是固定的手放掉了。</p>
+        </div>
+        <div class="timer" data-sec="90"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="47" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100"/></svg><div><div class="n">90</div><div class="u">秒</div><button type="button">開始計時</button></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 學員見證 ================= -->
+<section class="paper">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow reveal">學員怎麼說</span>
+      <h2 class="reveal">學完隔天<br>就用在客人身上</h2>
+    </div>
+    <div class="quotes">
+      <figure class="quote reveal"><blockquote>看完影片後立馬遇到一個客人就是這樣的狀況，當下立馬運用老師教的方式詢問跟調整手法。<b>真的是有上課有保庇。</b></blockquote><figcaption>W. ・ 線上課學員</figcaption></figure>
+      <figure class="quote reveal"><blockquote>今天把剛學成的新肩頸手技用在熟客身上，<b>她覺得真的有被深層放鬆到，跟之前的感覺完全不一樣</b>，還立刻問我新課程什麼時候上。</blockquote><figcaption>M. ・ 按摩師</figcaption></figure>
+      <figure class="quote reveal"><blockquote>這招真的很好用，昨天客人炸進來，直接拿來練手，<b>都說很有感。</b></blockquote><figcaption>學員 IG 回覆</figcaption></figure>
+      <figure class="quote reveal"><blockquote>我是養生館出身，年資快十年，一直是師傅帶著做 SOP。<b>我知道要怎麼按，但講不出所以然。</b>老師的課加入超多手技以外的東西，很超值。</blockquote><figcaption>M. ・ 自宅工作室</figcaption></figure>
+      <figure class="quote reveal"><blockquote>老師在發力、重心、角度及節奏這堂課程講得非常詳細，<b>示範很清楚，對我的幫助真的很大。</b></blockquote><figcaption>Y. ・ Skool 學員</figcaption></figure>
+      <figure class="quote reveal"><blockquote>已購買課程，<b>老師的講解清楚、很細節</b>，很喜歡。</blockquote><figcaption>W. ・ 海外學員</figcaption></figure>
+    </div>
+  </div>
+  <div class="wall-head reveal">
+    <span>來自 Miranda IG「學生反饋」的真實截圖</span>
+    <small>點圖可以放大</small>
+  </div>
+  <div class="wall reveal" aria-label="學員反饋截圖">
+    <div class="track"><button class="shot" type="button" data-full="assets/testi/t1.jpg"><img src="assets/testi/t1.jpg" alt="學員私訊：看完影片立刻用在客人身上" loading="lazy"></button><button class="shot" type="button" data-full="assets/testi/t5.jpg"><img src="assets/testi/t5.jpg" alt="學員回覆：這招客人都說很有感" loading="lazy"></button><button class="shot" type="button" data-full="assets/testi/t12.jpg"><img src="assets/testi/t12.jpg" alt="學員分享：新手法用在熟客身上" loading="lazy"></button><button class="shot" type="button" data-full="assets/testi/t4.jpg"><img src="assets/testi/t4.jpg" alt="學員課後訊息" loading="lazy"></button><button class="shot" type="button" data-full="assets/testi/t7.jpg"><img src="assets/testi/t7.jpg" alt="學員訊息：手法跟別人很有區隔" loading="lazy"></button><button class="shot" type="button" data-full="assets/testi/t2.jpg"><img src="assets/testi/t2.jpg" alt="學員課後合照與心得" loading="lazy"></button><button class="shot" type="button" data-full="assets/testi/t8.jpg"><img src="assets/testi/t8.jpg" alt="台東學員合照" loading="lazy"></button><button class="shot" type="button" data-full="assets/testi/t3.jpg"><img src="assets/testi/t3.jpg" alt="學員回饋對話" loading="lazy"></button><button class="shot" aria-hidden="true" tabindex="-1" type="button" data-full="assets/testi/t1.jpg"><img src="assets/testi/t1.jpg" alt="學員私訊：看完影片立刻用在客人身上" loading="lazy"></button><button class="shot" aria-hidden="true" tabindex="-1" type="button" data-full="assets/testi/t5.jpg"><img src="assets/testi/t5.jpg" alt="學員回覆：這招客人都說很有感" loading="lazy"></button><button class="shot" aria-hidden="true" tabindex="-1" type="button" data-full="assets/testi/t12.jpg"><img src="assets/testi/t12.jpg" alt="學員分享：新手法用在熟客身上" loading="lazy"></button><button class="shot" aria-hidden="true" tabindex="-1" type="button" data-full="assets/testi/t4.jpg"><img src="assets/testi/t4.jpg" alt="學員課後訊息" loading="lazy"></button><button class="shot" aria-hidden="true" tabindex="-1" type="button" data-full="assets/testi/t7.jpg"><img src="assets/testi/t7.jpg" alt="學員訊息：手法跟別人很有區隔" loading="lazy"></button><button class="shot" aria-hidden="true" tabindex="-1" type="button" data-full="assets/testi/t2.jpg"><img src="assets/testi/t2.jpg" alt="學員課後合照與心得" loading="lazy"></button><button class="shot" aria-hidden="true" tabindex="-1" type="button" data-full="assets/testi/t8.jpg"><img src="assets/testi/t8.jpg" alt="台東學員合照" loading="lazy"></button><button class="shot" aria-hidden="true" tabindex="-1" type="button" data-full="assets/testi/t3.jpg"><img src="assets/testi/t3.jpg" alt="學員回饋對話" loading="lazy"></button></div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="學員反饋截圖放大" hidden>
+  <button class="lb-close" type="button" aria-label="關閉">×</button>
+  <img alt="">
+</div>
+
+<!-- ================= 價值堆疊 / 報價 ================= -->
+<section id="offer">
+  <div class="wrap">
+    <div class="stack reveal">
+      <span class="eyebrow" style="display:block;text-align:center">年訂閱 ・ 你會拿到</span>
+      <div class="covers">
+        <figure class="pop"><img src="assets/cover-thorax.jpg" alt="胸廓體態系統課程封面" loading="lazy"><figcaption>胸廓體態系統<small>Miranda's Method™</small></figcaption></figure>
+        <figure class="pop"><img src="assets/cover-anny-face.jpg" alt="俄羅斯臉部筋膜塑形手法課程封面" loading="lazy"><figcaption>俄羅斯臉部筋膜塑形手法<small>Anny</small></figcaption></figure>
+        <figure class="pop"><img src="assets/cover-thorax-adv.jpg" alt="胸腔手技進階課程封面" loading="lazy"><figcaption>胸腔手技進階<small>10 月新上架</small></figcaption></figure>
+        <figure class="pop"><img src="assets/cover-basic.jpg" alt="基礎手技線上影音課程封面" loading="lazy"><figcaption>基礎手技線上影音課程<small>Miranda</small></figcaption></figure>
+      </div>
+      <h2>胸腔與體態系統<br><span style="font-size:.6em;color:var(--coffee)">＋ 俄羅斯臉部筋膜塑形</span></h2>
+      <ul>
+        <li class="pop"><span class="t"><svg viewBox="0 0 24 24" fill="none" stroke="#6b4630" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><span>Miranda's Method™ 八週胸廓手技系統<em>30 分／60 分完整服務流程</em></span></span><span class="v">胸口這一端</span></li>
+        <li class="pop"><span class="t"><svg viewBox="0 0 24 24" fill="none" stroke="#6b4630" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><span>俄羅斯臉部筋膜塑形手法<span class="tag">Anny</span><em>觀念、自我練習、客人全流程與捏臉，附每單元作業</em></span></span><span class="v">臉這一端</span></li>
+        <li class="pop"><span class="t"><svg viewBox="0 0 24 24" fill="none" stroke="#6b4630" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><span>物理治療師解剖學課 3 集＋學理專章</span></span><span class="v">分月釋出</span></li>
+        <li class="pop"><span class="t"><svg viewBox="0 0 24 24" fill="none" stroke="#6b4630" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><span>完整基礎手法課<em>原本單獨販售</em></span></span><span class="v">原價 NT$17,800</span></li>
+        <li class="pop"><span class="t"><svg viewBox="0 0 24 24" fill="none" stroke="#6b4630" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><span>法規安全包＋同意書範本＋文案檢查清單</span></span><span class="v">可直接套用</span></li>
+        <li class="pop"><span class="t"><svg viewBox="0 0 24 24" fill="none" stroke="#6b4630" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><span>IG 文案模板＋「半邊驗證」成交法</span></span><span class="v">照著改就能發</span></li>
+        <li class="pop"><span class="t"><svg viewBox="0 0 24 24" fill="none" stroke="#6b4630" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><span>Fiora 財務課：定價與成本計算</span></span><span class="v">包含在內</span></li>
+        <li class="pop"><span class="t"><svg viewBox="0 0 24 24" fill="none" stroke="#6b4630" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><span>每月直播：課程細節解析＋Q&A<em>練習片由講師親自看、親自改</em></span></span><span class="v">一整年</span></li>
+        <li class="pop"><span class="t"><svg viewBox="0 0 24 24" fill="none" stroke="#6b4630" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><span>側躺式胸腔手法<span class="tag">持續更新</span><em>孕期後段、躺不住的客人適用</em></span></span><span class="v">年內上架</span></li>
+        <li class="pop"><span class="t"><svg viewBox="0 0 24 24" fill="none" stroke="#6b4630" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><span>一年內所有新上架課程</span></span><span class="v">不用再多付</span></li>
+        <li class="pop"><span class="t"><svg viewBox="0 0 24 24" fill="none" stroke="#6b4630" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><span>實體手操團練課會員價<em>非會員 NT$10,000+ / 天</em></span></span><span class="v">NT$5,000 / 天</span></li>
+        <li class="pop"><span class="t"><svg viewBox="0 0 24 24" fill="none" stroke="#6b4630" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><span>10/21 教學課當晚專屬禮<span class="tag">待定</span><em>【待補】準時參加的人才有</em></span></span><span class="v">只有當晚</span></li>
+      </ul>
+      <div class="reveal-price">
+        <div class="seal">?</div>
+        <h3>想繼續學完整套？<br>10/21 教學課上說明</h3>
+        <p>加入方式會在教學課最後說明，當晚參加的人另有專屬禮。<br>先報名，開課前我們會提醒你。</p>
+        <a class="btn js-reg" href="https://www.skool.com/mirandas-massage-school-5068/about">免費報名 10/21 線上教學<small>（三）晚上 9:30 ・ 台灣時間</small></a>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 算帳 ================= -->
+<section class="paper">
+  <div class="wrap">
+    <span class="eyebrow reveal">帳怎麼算</span>
+    <h2 class="reveal">同樣一小時<br>差的是一整年</h2>
+    <div class="math">
+      <div class="cell reveal"><div class="n"><span class="count-up" data-to="1500" data-sep>0</span></div><div class="d">一般上半身放鬆<br>一小時的行情</div></div>
+      <div class="cell reveal"><div class="n"><span class="count-up" data-to="3500" data-sep>0</span></div><div class="d">Miranda 自己的<br>一小時定價</div></div>
+      <div class="cell reveal"><div class="n"><span class="count-up" data-to="48">0</span> 萬</div><div class="d">一個月 20 位客人<br>一年多出來的差距</div></div>
+    </div>
+    <p class="reveal center" style="font-size:20px">差別不在你按得多用力，<br>在你能不能做出一個<b>別人不會做、客人說得出差別</b>的服務。</p>
+  </div>
+</section>
+
+<!-- ================= 三件事 ================= -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow reveal">買之前，三件事先說清楚</span>
+    <h2 class="reveal">我們寧願先講白</h2>
+    <div class="promise">
+      <div class="reveal"><h3>一、不退費</h3><p>手法影片看完就學走了，沒辦法退貨。所以我們讓你先在免費教學課上驗貨，確定是你要的，再決定。</p></div>
+      <div class="reveal"><h3>二、先驗貨</h3><p>上面兩個動作你已經可以自己試。10/21 的線上教學，Miranda 和 Anny 會再帶你做一次——有沒有差，你的身體最清楚。</p></div>
+      <div class="reveal"><h3>三、當晚參加的人有專屬禮</h3><p>10/21 準時參加教學課的人，會拿到當晚才有的專屬禮。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 適合誰 ================= -->
+<section class="paper">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow reveal">用價格篩選，也用態度篩選</span>
+      <h2 class="reveal">這套系統不是給每個人的</h2>
+    </div>
+    <div class="fit">
+      <div class="col yes reveal"><h3>適合你，如果你是</h3><ul><li>有基礎的按摩師、美體師、美容師</li><li>想多一個上半身高單價服務</li><li>做身體的想學臉、做臉的想學身體</li><li>願意花一年，把系統學完、用出來</li></ul></div>
+      <div class="col no reveal"><h3>不適合你，如果你是</h3><ul><li>想看兩支影片就接客的</li><li>到處比價、只找最便宜的</li><li>買了課不練習、不交作業的</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section>
+  <div class="wrap">
+    <span class="eyebrow reveal">常見問題</span>
+    <h2 class="reveal">你可能還在想</h2>
+    <div class="faq">
+      <details class="reveal"><summary>我只做身體、沒做過臉，學得會嗎？</summary><div class="a">可以。臉部筋膜手法不用背套路、不用死記穴位，零基礎也能學。口訣只有三步：找到位置、一手固定一手拉開、感覺到阻抗再順著方向梳理。</div></details>
+      <details class="reveal"><summary>我是做臉的，胸廓的部分跟我有關嗎？</summary><div class="a">有。臉的張力跟脖子、胸口是連在一起的。Anny 自己做臉，也會搭配頭部、肩膀跟胸廓手法一起做，讓整個上半身輕盈，也更好設計成加購項目。</div></details>
+      <details class="reveal"><summary>臉部手法真的完全不用上油嗎？</summary><div class="a">主打不上油，才咬得住筋膜的張力。但技術是活的：客人皮膚太乾、脫皮或泛紅時，會教你改上一層很薄的乳霜當緩衝，不要硬乾推。</div></details>
+      <details class="reveal"><summary>客人一定要露出胸部嗎？</summary><div class="a">不需要。胸廓手法的特色就是不需裸露胸部，也能放鬆整個胸腔。</div></details>
+      <details class="reveal"><summary>線上真的學得會手技嗎？</summary><div class="a">影片拍得很細，每個單元都有作業和自我檢查清單。你可以上傳練習片，講師會親自看、親自改；每月直播也會帶大家一起看片解析。</div></details>
+      <details class="reveal"><summary>沒辦法準時參加 10/21 的教學課怎麼辦？</summary><div class="a">先報名，之後會收到相關通知。不過當晚的專屬禮，只給準時參加的人。</div></details>
+      <details class="reveal"><summary>課程多少錢？</summary><div class="a">會在 10/21 教學課最後說明。先來免費上一堂、先驗貨，再決定要不要繼續學。</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 最後 CTA ================= -->
+<section class="paper">
+  <div class="wrap center">
+    <h2 class="reveal">下次客人說肩頸很緊<br>你會從哪裡開始？</h2>
+    <p class="reveal" style="max-width:560px;margin:0 auto 34px">還是只按肩膀，讓客人隔天又緊回來？<br>還是從胸口到臉，做出一套客人自己說得出差別的服務？</p>
+    <a class="btn js-reg reveal" href="https://www.skool.com/mirandas-massage-school-5068/about">加入 Skool，免費報名<small>10/21（三）晚上 9:30 ・ 台灣時間</small></a>
+    <p class="trust">點擊後前往 Miranda's Massage School 的 Skool 頁面，加入社群即完成報名</p>
+  </div>
+  <div class="wrap ps" style="margin-top:72px">
+    <div class="rule"></div>
+    <p class="reveal"><b>P.S.</b> 如果你直接滑到最下面：臉、脖子、胸口是同一張網。10/21（三）晚上 9:30，Miranda × Anny 免費線上教學，帶你親手在自己身上做一次，再告訴你怎麼把它變成一個高單價服務。</p>
+    <p class="reveal"><b>P.P.S.</b> 記得準備一面鏡子。教學課上我們會請你先做半邊——做完你就知道我們在說什麼了。</p>
+  </div>
+</section>
+
+<footer>
+  <img src="assets/logo-method.png" alt="Miranda's METHOD">
+  <p>本課程為非醫療性質之專業手技教育，著重上半身與臉部舒壓、身體觀察、體態線條美學與服務流程設計，不涉及任何疾病之診斷、治療、矯正或預防，亦不取代醫師、物理治療師之專業業務。學員執業時應遵守相關法規。</p>
+  <p style="margin-top:14px">© Miranda's Massage School</p>
+</footer>
+
+<div class="sticky" id="sticky">
+  <div class="s"><b>10/21（三）21:30 免費線上教學</b>Miranda × Anny</div>
+  <a class="btn js-reg" href="https://www.skool.com/mirandas-massage-school-5068/about">免費報名</a>
+</div>
+
+<script>
+/* ============ 設定區 ============ */
+const CONFIG = {
+  registerUrl: "https://www.skool.com/mirandas-massage-school-5068/about",   // ← 報名：導到 Skool About 頁加入社群
+  webinar: "2026-10-21T21:30:00+08:00"     // ← 線上教學時間（台灣時間）
+};
+
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if(CONFIG.registerUrl!=='#') document.querySelectorAll('.js-reg').forEach(a=>a.href=CONFIG.registerUrl);
+
+/* 進場動畫 */
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(en=>{
+    if(!en.isIntersecting) return;
+    const el=en.target;
+    const sibs=[...el.parentElement.children].filter(c=>c.classList.contains('reveal')||c.classList.contains('pop'));
+    el.style.transitionDelay = Math.min(Math.max(sibs.indexOf(el),0),6)*70+'ms';
+    el.classList.add('in');
+    if(el.classList.contains('jelly-scroll')) setTimeout(()=>el.classList.add('settled'),1200);
+    el.querySelectorAll('.pop').forEach((p,i)=>{p.style.transitionDelay=(i*80+150)+'ms';p.classList.add('in')});
+    el.querySelectorAll('.count-up').forEach(countUp);
+    io.unobserve(el);
+  });
+},{threshold:.15,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.reveal, .pop').forEach(el=>io.observe(el));
+
+/* 一張網：線條畫出來 */
+const net=document.getElementById('net');
+new IntersectionObserver((es,o)=>{es.forEach(e=>{if(e.isIntersecting){net.classList.add('in');o.disconnect()}})},{threshold:.3}).observe(net);
+
+/* 標題「按臉」抖一下 */
+setTimeout(()=>document.querySelector('.hero .face').classList.add('wobble'),300);
+
+/* 數字跳動 */
+function countUp(el){
+  const to=+el.dataset.to, sep=el.hasAttribute('data-sep'), t0=performance.now(), dur=1400;
+  const fmt=n=>sep?n.toLocaleString('en-US'):n;
+  if(reduce){el.textContent=fmt(to);return}
+  (function f(t){const p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,4);el.textContent=fmt(Math.round(to*e));if(p<1)requestAnimationFrame(f)})(t0);
+}
+
+/* 果凍捲動 + 進度條 + 底部 CTA */
+const jellies=[...document.querySelectorAll('.jelly-scroll')];
+const bar=document.getElementById('bar'), sticky=document.getElementById('sticky'), hero=document.querySelector('.hero');
+let lastY=scrollY, skew=0, vel=0;
+(function loop(){
+  const y=scrollY, v=y-lastY; lastY=y;
+  if(!reduce){
+    const target=Math.max(-6,Math.min(6,v*0.35));
+    vel+=(target-skew)*0.18; vel*=0.72; skew+=vel;
+    jellies.forEach(el=>{if(!el.classList.contains('in'))return;
+      el.style.transform=`skewY(${skew*0.35}deg) scale(${1+Math.abs(skew)*0.004},${1-Math.abs(skew)*0.004})`});
+  }
+  const h=document.documentElement.scrollHeight-innerHeight;
+  bar.style.transform=`scaleX(${h>0?y/h:0})`;
+  sticky.classList.toggle('on', y>hero.offsetTop+hero.offsetHeight-200 && y<h-260);
+  requestAnimationFrame(loop);
+})();
+
+/* 教學課倒數 */
+const dl=new Date(CONFIG.webinar).getTime();
+const boxes=[...document.querySelectorAll('[data-count]')];
+const prev={};
+function tickCount(){
+  const ms=Math.max(0,dl-Date.now());
+  const val={d:Math.floor(ms/864e5),h:Math.floor(ms/36e5)%24,m:Math.floor(ms/6e4)%60,s:Math.floor(ms/1e3)%60};
+  for(const k in val){
+    const t=String(val[k]).padStart(2,'0'); if(prev[k]===t) continue; prev[k]=t;
+    boxes.forEach(b=>{const c=b.querySelector(`[data-u="${k}"]`);c.textContent=t;
+      if(!reduce){c.parentElement.classList.remove('tick');void c.offsetWidth;c.parentElement.classList.add('tick')}});
+  }
+}
+tickCount(); setInterval(tickCount,1000);
+
+/* 分頁（果凍滑塊） */
+const tabs=[...document.querySelectorAll('.tabs button')], blob=document.getElementById('blob');
+function moveBlob(b){blob.style.width=b.offsetWidth+'px';blob.style.transform=`translateX(${b.offsetLeft-5}px)`}
+tabs.forEach(b=>b.addEventListener('click',()=>{
+  tabs.forEach(t=>t.setAttribute('aria-selected',t===b));
+  document.querySelectorAll('.pane').forEach(p=>p.classList.toggle('on',p.id===b.dataset.pane));
+  moveBlob(b);
+}));
+requestAnimationFrame(()=>moveBlob(tabs[0]));
+addEventListener('resize',()=>moveBlob(tabs.find(t=>t.getAttribute('aria-selected')==='true')));
+document.fonts&&document.fonts.ready.then(()=>moveBlob(tabs.find(t=>t.getAttribute('aria-selected')==='true')));
+
+/* 計時器 */
+document.querySelectorAll('.timer').forEach(tm=>{
+  const total=+tm.dataset.sec, ring=tm.querySelector('circle'), n=tm.querySelector('.n'), btn=tm.querySelector('button');
+  let id=null;
+  btn.addEventListener('click',()=>{
+    clearInterval(id); let left=total; n.textContent=left;
+    ring.style.transition='none'; ring.style.strokeDashoffset=100;
+    requestAnimationFrame(()=>{ring.style.transition='stroke-dashoffset 1s linear'});
+    btn.textContent='進行中…';
+    id=setInterval(()=>{
+      left--; n.textContent=left; ring.style.strokeDashoffset=100*left/total;
+      if(left<=0){clearInterval(id);n.textContent='✓';btn.textContent='換另一邊比比看';
+        if(!reduce) n.animate([{transform:'scale(.4)'},{transform:'scale(1.25,.85)'},{transform:'scale(.95,1.05)'},{transform:'scale(1)'}],{duration:800})}
+    },1000);
+  });
+});
+
+/* 見證截圖放大 */
+const lb=document.getElementById('lightbox'), lbImg=lb.querySelector('img');
+document.querySelectorAll('.shot').forEach(b=>b.addEventListener('click',()=>{
+  lbImg.src=b.dataset.full; lbImg.alt=b.querySelector('img').alt; lb.hidden=false; lb.querySelector('.lb-close').focus();
+}));
+function closeLb(){lb.hidden=true}
+lb.addEventListener('click',e=>{if(e.target!==lbImg)closeLb()});
+addEventListener('keydown',e=>{if(e.key==='Escape')closeLb()});
+</script>
+</body>
+</html>
