@@ -91,6 +91,8 @@ p+p{margin-top:1.1em}
   box-shadow:0 30px 60px -30px rgba(74,47,31,.55);border:6px solid #fff;background:#eee;
 }
 .photos .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.photos .ph img.face-m{object-position:50% 18%}
+.teacher .ph img.face-m{object-position:50% 20%}
 .photos .m{width:62%;height:84%;left:0;top:0;animation:bob 6s ease-in-out infinite}
 .photos .a{width:52%;height:66%;right:0;bottom:0;animation:bob 6s -3s ease-in-out infinite}
 .photos .cap{
@@ -252,12 +254,12 @@ section.paper .pull{background:linear-gradient(90deg,#fff,transparent)}
 
 /* 教學課會學到 */
 .learn{display:grid;gap:16px;margin:30px 0 36px}
-.learn div{
+.learn > div{
   display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start;
   border:1px solid rgba(233,201,164,.25);border-radius:18px;padding:22px 24px;
   transition:transform .6s var(--spring),background .3s;
 }
-.learn div:hover{transform:scale(1.02,.98);background:rgba(255,255,255,.04)}
+.learn > div:hover{transform:scale(1.02,.98);background:rgba(255,255,255,.04)}
 .learn .k{font-size:34px;font-weight:900;color:var(--cream);line-height:1}
 .learn h3{font-size:20px;color:#fff;margin-bottom:4px}
 .learn p{font-size:16px;color:#d9ccbf}
@@ -430,7 +432,10 @@ footer img{height:90px;margin:0 auto 20px;opacity:.9}
 .sticky.on{transform:none}
 .sticky .s{font-size:14px;line-height:1.4}
 .sticky .s b{display:block;font-size:15px}
-.sticky .btn{padding:12px 22px;font-size:16px}
+.sticky .btn{padding:12px 22px;font-size:16px;white-space:nowrap;flex:none}
+.sticky .s{min-width:0}
+.sticky .s b{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:480px){.sticky{padding-left:18px}.sticky .s{font-size:12px}.sticky .s b{font-size:14px}.sticky .btn{padding:11px 18px;font-size:15px}}
 
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
@@ -476,7 +481,7 @@ footer img{height:90px;margin:0 auto 20px;opacity:.9}
       </div>
       <div class="photos reveal">
         <img class="lineface" src="assets/logo-face.png" alt="">
-        <div class="ph m"><img src="assets/miranda.jpg" alt="Miranda"></div>
+        <div class="ph m"><img class="face-m" src="assets/miranda.jpg" alt="Miranda 為客人做肩頸手技"></div>
         <div class="ph a"><img src="assets/anny.jpg" alt="Anny"></div>
         <div class="cap c1">Miranda<small>胸廓與體態</small></div>
         <div class="cap c2">Anny<small>臉部筋膜塑形</small></div>
@@ -597,7 +602,7 @@ footer img{height:90px;margin:0 auto 20px;opacity:.9}
     </div>
     <div class="duo">
       <article class="teacher reveal">
-        <div class="ph"><img src="assets/miranda.jpg" alt="Miranda"></div>
+        <div class="ph"><img class="face-m" src="assets/miranda.jpg" alt="Miranda 為客人做肩頸手技"></div>
         <div class="bd">
           <div class="role">胸廓與體態</div>
           <h3>Miranda</h3>
@@ -615,7 +620,7 @@ footer img{height:90px;margin:0 auto 20px;opacity:.9}
           <h3>Anny</h3>
           <ul>
             <li>美容產業 17 年，有自己的店面與企業培訓</li>
-            <li>臉部與頭部賽事冠軍（賽事名稱待確認）</li>
+            <li>2026 亞洲按摩錦標賽 臉部及頭部冠軍</li>
             <li>不上油、不背穴位，零基礎也能上手</li>
           </ul>
         </div>
@@ -833,7 +838,7 @@ footer img{height:90px;margin:0 auto 20px;opacity:.9}
 </footer>
 
 <div class="sticky" id="sticky">
-  <div class="s"><b>10/21（三）21:30 免費線上教學</b>Miranda × Anny</div>
+  <div class="s"><b>10/21（三）21:30</b>免費線上教學 ・ Miranda × Anny</div>
   <a class="btn js-reg" href="https://www.skool.com/mirandas-massage-school-5068/about">免費報名</a>
 </div>
 
